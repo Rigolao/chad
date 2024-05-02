@@ -1,4 +1,4 @@
-import {AppBar} from "@/components/ui/app-bar.tsx";
+import {AppBar} from "@/components/custom/app-bar.tsx";
 
 function App() {
 
