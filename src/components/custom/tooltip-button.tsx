@@ -1,10 +1,10 @@
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip.tsx";
 import {Button} from "@/components/ui/button.tsx";
-import {LucideIcon} from "lucide-react";
+import {ElementType} from "react";
 
 interface TooltipButtonProps {
     label?: string
-    icon?: LucideIcon
+    icon?: ElementType
     tooltip: string
 }
 

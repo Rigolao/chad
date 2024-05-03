@@ -1,10 +1,10 @@
 import {Button} from "@/components/ui/button.tsx";
-import {LucideIcon} from "lucide-react";
 import {cn} from "@/lib/utils.ts";
+import {ElementType} from "react";
 
 interface AppBarItemProps {
     label: string
-    icon: LucideIcon
+    icon: ElementType
     selected?: boolean
 }
 
