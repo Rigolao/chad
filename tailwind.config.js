@@ -52,6 +52,10 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      gridTemplateColumns: {
+        'auto-fill-72': 'repeat(auto-fill, minmax(18rem, 1fr))',
+        'auto-fit-72': 'repeat(auto-fit, minmax(18rem, 1fr))',
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
