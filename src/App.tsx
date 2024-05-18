@@ -1,36 +1,57 @@
-import {AppBar} from "@/components/custom/app-bar.tsx";
-import {Instagram, LucideFacebook, Twitter, Youtube} from "lucide-react";
-import {ConnectSocialMediaCard} from "@/components/custom/connect-social-media-card.tsx";
+import {HomePage} from "@/pages/home-page.tsx";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import NotFoundPage from "@/pages/not-found-page.tsx";
+import PostsCalendarPage from "@/pages/posts-calendar-page.tsx";
+import Root from "@/routes/root.tsx";
+import SchedulePostPage from "@/pages/schedule-post-page.tsx";
+import PortifolioPage from "@/pages/portifolio-page.tsx";
+import ChangePasswordPage from "@/pages/change-password-page.tsx";
+import ProfilePage from "@/pages/profile-page.tsx";
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Root />,
+        errorElement: <NotFoundPage />,
+        children: [
+            {
+                errorElement: <NotFoundPage />,
+                children: [
+                    {
+                        path: '/',
+                        index: true,
+                        element: <HomePage />,
+                    },
+                    {
+                        path: 'postagens/',
+                        element: <PostsCalendarPage />
+                    },
+                    {
+                        path: 'agendar-postagem/',
+                        element: <SchedulePostPage />
+                    },
+                    {
+                        path: 'portifolio/',
+                        element: <PortifolioPage />
+                    },
+                    {
+                        path: 'alterar-senha/',
+                        element: <ChangePasswordPage />
+                    },
+                    {
+                        path: 'perfil/',
+                        element: <ProfilePage />
+                    },
+                ]
+            }
+        ],
+    },
+]);
 
 function App() {
 
     return (
-        <div className="flex w-screen h-screen flex-col ">
-            <AppBar />
-
-            <div className="grow mt-8 mx-6">
-                <h1 className="text-xl md:text-2xl font-semibold text-foreground ">
-                    Início
-                </h1>
-
-            <div className={"grid grid-cols-auto-fill-72 gap-4 my-6"}>
-                <ConnectSocialMediaCard label={"Facebook"} icon={LucideFacebook}/>
-                <ConnectSocialMediaCard label={"Instagram"} icon={Instagram}/>
-                <ConnectSocialMediaCard label={"Twitter"} icon={Twitter}/>
-                <ConnectSocialMediaCard label={"YouTube"} icon={Youtube}/>
-                <ConnectSocialMediaCard label={"Facebook"} icon={LucideFacebook}/>
-                <ConnectSocialMediaCard label={"Instagram"} icon={Instagram}/>
-                <ConnectSocialMediaCard label={"Twitter"} icon={Twitter}/>
-                <ConnectSocialMediaCard label={"YouTube"} icon={Youtube}/>
-
-            </div>
-
-            </div>
-
-            <div className="flex border-t-2 h-8 justify-center items-center">
-                <h3>SocialHub</h3>
-            </div>
-        </div>
+        <RouterProvider router={router}/>
     )
 }
 

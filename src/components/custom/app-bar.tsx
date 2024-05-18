@@ -37,10 +37,10 @@ export function AppBar() {
                         <ProfileConfig />
                     </div>
                     <Separator />
-                    <AppBarItem label={"Início"} icon={HomeIcon} selected={true}/>
-                    <AppBarItem label={"Postagens"} icon={CalendarIcon}/>
-                    <AppBarItem label={"Agendar postagem"} icon={PlusIcon}/>
-                    <AppBarItem label={"Portfólio"} icon={PersonIcon}/>
+                    <AppBarItem label={"Início"} icon={HomeIcon} route={'/'}/>
+                    <AppBarItem label={"Postagens"} icon={CalendarIcon} route={'/postagens'}/>
+                    <AppBarItem label={"Agendar postagem"} icon={PlusIcon} route={'/agendar-postagem'}/>
+                    <AppBarItem label={"Portfólio"} icon={PersonIcon} route={'/portifolio'}/>
                     <SheetFooter className="md:hidden flex flex-row justify-between mt-auto">
                         <ModeToggle/>
                         <TooltipButton tooltip={"Sair"} label={"Sair"} icon={ExitIcon}/>

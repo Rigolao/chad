@@ -1,4 +1,4 @@
-import {Card, CardContent, CardHeader} from "@/components/ui/card.tsx";
+import {Card, CardContent} from "@/components/ui/card.tsx";
 import {Button} from "@/components/ui/button.tsx";
 import {ElementType} from "react";
 import {InfoIcon} from "lucide-react";
