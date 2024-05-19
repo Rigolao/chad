@@ -10,11 +10,10 @@ export function HomePage() {
             </h1>
 
             <div className={"grid grid-cols-auto-fill-72 gap-4 my-6"}>
-                <ConnectSocialMediaCard label={"Facebook"} icon={LucideFacebook}/>
-                <ConnectSocialMediaCard label={"Instagram"} icon={Instagram}/>
-                <ConnectSocialMediaCard label={"Twitter"} icon={Twitter}/>
-                <ConnectSocialMediaCard label={"YouTube"} icon={Youtube}/>
-
+                <ConnectSocialMediaCard label={"Facebook"} icon={LucideFacebook} ribbonColor={'facebook'}/>
+                <ConnectSocialMediaCard label={"Instagram"} icon={Instagram} ribbonColor={'instagram'}/>
+                <ConnectSocialMediaCard label={"Twitter"} icon={Twitter} ribbonColor={'twitter'}/>
+                <ConnectSocialMediaCard label={"YouTube"} icon={Youtube} ribbonColor={'youtube'}/>
             </div>
         </div>
     );
