@@ -1,13 +1,12 @@
 import {ConnectSocialMediaCard} from "@/components/custom/connect-social-media-card.tsx";
 import {Instagram, LucideFacebook, Twitter, Youtube} from "lucide-react";
+import PageTitle from "@/components/custom/page-title.tsx";
 
 export function HomePage() {
 
     return (
         <div className="grow mt-8 mx-6">
-            <h1 className="text-xl md:text-2xl font-semibold text-foreground ">
-                Início
-            </h1>
+            <PageTitle title={'Início'}/>
 
             <div className={"grid grid-cols-auto-fill-72 gap-4 my-6"}>
                 <ConnectSocialMediaCard label={"Facebook"} icon={LucideFacebook} ribbonColor={'facebook'}/>
