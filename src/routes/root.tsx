@@ -10,7 +10,7 @@ export default function Root() {
     const navigation = useNavigation();
 
     return (
-        <div className="flex w-screen h-screen flex-col ">
+        <div className="flex w-screen min-h-screen h-1 flex-col ">
             <Toaster richColors closeButton />
 
             <AppBar/>
