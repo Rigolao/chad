@@ -18,7 +18,9 @@ export function ProfileConfig() {
             <DropdownMenuTrigger asChild>
                 <TooltipButton tooltip={"Configurações"} icon={SettingsIcon} />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56">
+            <DropdownMenuContent
+                onCloseAutoFocus={(e) => e.preventDefault()}
+                className="w-56">
                 <DropdownMenuLabel>Configurações</DropdownMenuLabel>
                 <DropdownMenuSeparator/>
                 <DropdownMenuItem>
