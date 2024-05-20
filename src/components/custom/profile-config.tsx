@@ -8,15 +8,15 @@ import {
 } from "@/components/ui/dropdown-menu.tsx";
 import {LockIcon, SettingsIcon} from "lucide-react";
 import {PersonIcon} from "@radix-ui/react-icons";
-import {TooltipButton} from "@/components/custom/tooltip-button.tsx";
 import {Link} from "react-router-dom";
+import TooltipButton from "@/components/custom/tooltip-button.tsx";
 
 export function ProfileConfig() {
 
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger>
-                <TooltipButton tooltip={"Configurações"} icon={SettingsIcon}/>
+            <DropdownMenuTrigger asChild>
+                <TooltipButton tooltip={"Configurações"} icon={SettingsIcon} />
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
                 <DropdownMenuLabel>Configurações</DropdownMenuLabel>

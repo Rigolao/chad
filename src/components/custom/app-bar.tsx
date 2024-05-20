@@ -1,12 +1,12 @@
-import {ModeToggle} from "@/components/ui/mode-toggle.tsx";
 import {Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger} from "@/components/ui/sheet.tsx";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar.tsx";
 import {MenuIcon} from "lucide-react";
 import {ProfileConfig} from "@/components/custom/profile-config.tsx";
 import {CalendarIcon, ExitIcon, HomeIcon, PersonIcon, PlusIcon} from "@radix-ui/react-icons";
-import {TooltipButton} from "@/components/custom/tooltip-button.tsx";
 import {AppBarItem} from "@/components/custom/app-bar-item.tsx";
 import {Separator} from "@/components/ui/separator.tsx";
+import TooltipButton from "@/components/custom/tooltip-button.tsx";
+import ModeToggle from "@/components/ui/mode-toggle.tsx";
 
 export function AppBar() {
     return (

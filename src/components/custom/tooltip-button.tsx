@@ -1,6 +1,6 @@
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip.tsx";
 import {Button} from "@/components/ui/button.tsx";
-import {ElementType} from "react";
+import {ElementType, forwardRef} from "react";
 
 interface TooltipButtonProps {
     label?: string
@@ -8,15 +8,23 @@ interface TooltipButtonProps {
     tooltip: string
 }
 
-export function TooltipButton({label, icon: Icon, tooltip}: TooltipButtonProps) {
+const TooltipButton = forwardRef<HTMLButtonElement,
+                                                                TooltipButtonProps>(function TooltipButton({
+                                                   label,
+                                                   icon: Icon,
+                                                   tooltip,
+                                                   ...props
+                                               }: TooltipButtonProps, ref) {
     return (
         <TooltipProvider>
             <Tooltip>
                 <TooltipTrigger asChild>
                     <Button
+                        ref={ref}
                         size="icon"
                         variant="outline"
-                        className="w-auto p-2 flex gap-2 font-semibold">
+                        className="w-auto p-2 flex gap-2 font-semibold"
+                        {...props}>
                         {Icon && <Icon className="h-[1.2rem] w-[1.2rem] md:size-5"/>}
                         {label}
                     </Button>
@@ -27,4 +35,6 @@ export function TooltipButton({label, icon: Icon, tooltip}: TooltipButtonProps) 
             </Tooltip>
         </TooltipProvider>
     )
-}
+});
+
+export default TooltipButton;
