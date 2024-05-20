@@ -19,6 +19,7 @@ export function AppBar() {
                     </h1>
                 </SheetTrigger>
                 <SheetContent
+                    onOpenAutoFocus={(e) => e.preventDefault()}
                     side="left"
                     className="flex flex-col">
                     <SheetHeader>
