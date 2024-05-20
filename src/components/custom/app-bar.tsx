@@ -10,7 +10,7 @@ import ModeToggle from "@/components/ui/mode-toggle.tsx";
 
 export function AppBar() {
     return (
-        <div className="flex w-screen h-[60px] md:h-[80px] py-2 px-4 md:px-6 border-b-2 items-center justify-between">
+        <div className="sticky top-0 left-0 bg-background flex w-screen h-[60px] md:h-[80px] py-4 px-4 md:px-6 border-b-2 items-center justify-between">
             <Sheet>
                 <SheetTrigger className="flex gap-2 md:gap-4 justify-center items-center">
                     <MenuIcon className="h-[1.2rem] w-[1.2rem] md:size-8"/>
